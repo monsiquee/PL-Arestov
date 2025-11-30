@@ -1,0 +1,34 @@
+# ---- Задача 1 ----
+print("Введите 10 целых чисел:")
+
+n = []      # пустой список
+for i in range(10):
+    num = int(input(f"Число {i + 1}: "))
+    n.append(num)
+
+even_n = []
+
+for num in n:
+    if num % 2 == 0:
+        even_n.append(num)
+
+if len(even_n) > 0:
+    max_even = max(even_n)
+
+    print("\n---- Задача 1 ----")
+    print(f"Наибольший чётный элемент: {max_even}")
+else:
+    print("В списке нет чётных чисел.")
+
+# ---- Задача 2 ----
+less_10 = []
+for num in n:
+    if num % 2 == 0 and num < 10:
+        less_10.append(num)
+
+if len(less_10) > 0:
+
+    print("\n---- Задача 2 ----")
+    print(f"Чётные числа, меньшие 10: {less_10}")
+else:
+    print("Нет чётных чисел, меньших 10.")
